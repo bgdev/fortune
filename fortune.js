@@ -6,9 +6,9 @@
     var id = 'logostrip',
         url = 'https://raw.githubusercontent.com/bgdev/fortune/master/cookies',
 
-        handler = function (id) {
-            if (this.status === 200) {
-                var lines = this.responseText.trim().split('\n');
+        handler = function (req, id) {
+            if (req.status === 200) {
+                var lines = req.responseText.trim().split('\n');
                 var rnd = Math.floor(Math.random() * lines.length);
                 var element = document.getElementById(id);
                 element.innerHTML = lines[rnd];
@@ -18,7 +18,7 @@
         fortune = function (id, url) {
             var req = new XMLHttpRequest();
             req.addEventListener('load', function () {
-                handler.call(this, id);
+                handler.apply(this, id);
             });
             req.open('GET', url);
             req.send();
