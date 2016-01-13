@@ -8,9 +8,9 @@
 
         handler = function (req, id) {
             if (req.status === 200) {
-                var lines = req.responseText.trim().split('\n');
-                var rnd = Math.floor(Math.random() * lines.length);
-                var element = document.getElementById(id);
+                var lines = req.responseText.trim().split('\n'),
+                    rnd = Math.floor(Math.random() * lines.length),
+		    element = document.getElementById(id);
                 element.innerHTML = lines[rnd];
             }
         },
