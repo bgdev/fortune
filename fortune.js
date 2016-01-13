@@ -18,7 +18,7 @@
         fortune = function (id, url) {
             var req = new XMLHttpRequest();
             req.addEventListener('load', function () {
-                handler.apply(this, id);
+                handler.call(null, this, id);
             });
             req.open('GET', url);
             req.send();
