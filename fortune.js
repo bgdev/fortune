@@ -10,7 +10,7 @@
             if (req.status === 200) {
                 var lines = req.responseText.trim().split('\n'),
                     rnd = Math.floor(Math.random() * lines.length),
-		    element = document.getElementById(id);
+                    element = document.getElementById(id);
                 element.innerHTML = lines[rnd];
             }
         },
