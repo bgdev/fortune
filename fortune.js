@@ -4,7 +4,7 @@
     'use strict';
 
     var id = 'logostrip',
-        url = 'https://raw.githubusercontent.com/bgdev/fortune/master/cookies',
+        url = 'https://raw.githubusercontent.com/bgdev/fortune/master/cookies?t=' + new Date().getTime(),
 
         handler = function (req, id) {
             if (req.status === 200) {
