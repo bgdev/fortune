@@ -1,0 +1,32 @@
+.fortune-container {
+    text-align: center;
+}
+
+#fortune {
+    display: block;
+    background: #fff;
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position: relative;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #666;
+    text-align: justify;
+    border-left: 15px solid #F26422;
+    border-right: 2px solid #F26422;
+    -moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;
+}
+
+#fortune::before {
+    content: "\201C";
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #D0D8DC;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
